@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+     //Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = null;
+}
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    @*https://codeseven.github.io/toastr/*@
+    <script type="text/javascript" src="~/Scripts/loginScript.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+</head>
+
+<body>
+    <h2>Login</h2>
+    <div class="jumbotron">
+        <form >
+            <label for="emailAdr">Email Address : </label>
+            <input type="email" id="emailAddress"/>
+            <br />
+            <label for="pwd">Password : </label>
+            <input type="password" id="password"/>
+            <br />
+            <button id="btnRegister">Register</button>           
+            <button id="btnSignIn">Login</button>
+        </form>
+</div>
+</body>

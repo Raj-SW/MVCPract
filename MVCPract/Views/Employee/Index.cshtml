@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employee Index</h2>
+
+<p>Ala mo view</p>
+<body>
+    <div>
+        @ViewBag.Greeting (<b>From Index View</b>)
+    </div>
+    <div class="dvEmployeeDetails">
+        <p>@Html.ActionLink("Create New","Create")</p>
+        <table id="employeedetailsTable" border="1">
+        <thead>
+            <tr>
+                <th></th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Home Phone</th>
+                <th>Address</th>
+                <th>Adress 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.EmployeeList)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { employeeId = item.EmployeeId })
+                    </td>
+                    <td>
+                        @item.FirstName
+                    </td>
+                    <td>
+                        @item.LastName
+                    </td>
+                    <td>
+                        @item.Address
+                    </td>
+                    <td>
+                        @item.Address2
+                    </td>
+                    <td>
+                        @item.HomePhone
+                    </td>
+                    <td>
+                        @item.EmailAddress
+                    </td>
+
+
+
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { employeeId = item.EmployeeId }) |
+                        @Html.ActionLink("Delete", "Delete", new { employeeId = item.EmployeeId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </div>
+</body>
